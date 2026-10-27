@@ -1,9 +1,10 @@
 {
   "name": "PocketBase | Open-Source Backend in One File (Database, Auth, Files, Realtime)",
   "short_name": "PocketBase Backend",
-  "description": "SQLite database, auth, file storage, realtime and an admin UI in one Go binary",
+  "description": "Database, auth, file storage, realtime and admin UI in one Go binary",
   "category": "Starters",
   "image": "https://raw.githubusercontent.com/two-workspaces/pocketbase/main/icon.svg",
   "card_desc": "PocketBase: an open-source backend in one file. A realtime SQLite database with a REST API, user auth (password, OTP, OAuth2), file storage and an admin dashboard. Superuser created on first boot, data on a volume.",
-  "id": "30224358-84a0-44fc-8e67-93e57cb6d522"
+  "id": "30224358-84a0-44fc-8e67-93e57cb6d522",
+  "published": true
 }

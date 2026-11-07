@@ -2,7 +2,7 @@
 
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/pocketbase-backend?referralCode=sLjDXb&utm_medium=integration&utm_source=button&utm_campaign=pocketbase-backend)
 
-[PocketBase](https://pocketbase.io/) is an open-source backend in a single Go binary: an embedded SQLite database with realtime subscriptions, a REST API, user authentication (password, one-time codes, OAuth2, MFA), file storage and an admin dashboard. Point your web or mobile app at it with the JavaScript or Dart SDK and skip writing a backend. This template runs PocketBase 0.40.6 with its data on a Railway volume and creates your superuser on first boot.
+[PocketBase](https://pocketbase.io/) is an open-source backend in a single Go binary: an embedded SQLite database with realtime subscriptions, a REST API, user authentication (password, one-time codes, OAuth2, MFA), file storage and an admin dashboard. Point your web or mobile app at it with the JavaScript or Dart SDK and skip writing a backend. This template runs PocketBase 0.41.1 with its data on a Railway volume and creates your superuser on first boot.
 
 ## About Hosting PocketBase
 

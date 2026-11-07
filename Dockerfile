@@ -4,6 +4,7 @@ FROM alpine:3.24
 # PocketBase moved off GitHub in Oct 2026 (pocketbase/pocketbase#7872); releases
 # are only published at ganigeorgiev.com/pocketbase now. Bump both together:
 # the checksum is from that release's checksums.txt.
+# upgrade: bugstage ganigeorgiev.com/pocketbase/pocketbase
 ARG PB_VERSION=0.41.1
 ARG PB_SHA256=7504ec99a85fe405fc9941b4d94bdea20733b53707c8251b66fd0daa1444347e
 RUN apk add --no-cache ca-certificates \

@@ -8,7 +8,7 @@
 
 The stack is one service with one volume.
 
-- **Built from the official release.** The image ([source](https://github.com/two-workspaces/pocketbase)) downloads the pinned PocketBase release from GitHub into a small Alpine image. No third-party build.
+- **Built from the official release.** The image ([source](https://github.com/two-workspaces/pocketbase)) downloads the pinned PocketBase release from the author's release site, checks its SHA-256, and puts it in a small Alpine image. No third-party build.
 - **Superuser on first boot.** A one-time migration creates the superuser from `PB_ADMIN_EMAIL` and the generated `PB_ADMIN_PASSWORD`, so the dashboard is never left open for whoever finds the URL first.
 - **Real client IPs.** PocketBase is set to read the client address from Railway's `X-Real-IP` header, so request logs and the built-in rate limiter see your users rather than Railway's proxy.
 - **Encrypted settings.** Stored secrets (SMTP password, S3 keys, OAuth2 client secrets) are encrypted with the generated `PB_ENCRYPTION_KEY`.
@@ -55,7 +55,7 @@ const pb = new PocketBase('https://<your domain>')
 
 **Back up.** Use Settings, Backups in the dashboard (to the volume or to S3-compatible storage), or Railway's volume backups.
 
-**Upgrading.** Bump `PB_VERSION` in the Dockerfile of your fork and redeploy. Read the [release notes](https://github.com/pocketbase/pocketbase/releases) first; PocketBase is pre-1.0 and some releases change the API.
+**Upgrading.** Bump `PB_VERSION` and `PB_SHA256` (from that release's `checksums.txt`) in the Dockerfile of your fork and redeploy. Read the [changelog](https://ganigeorgiev.com/pocketbase/pocketbase) first; PocketBase is pre-1.0 and some releases change the API. Since 0.42.0, a request with an expired or unknown `Authorization` token gets a 401 instead of being treated as a guest, so clear stale tokens in your client (`pb.authStore.clear()`) rather than relying on the old fallback.
 
 ## Why Deploy PocketBase on Railway?
 
